@@ -1,6 +1,8 @@
-
 <?php
+// Include a file using an absolute path
+require '/xampp/htdocs/e-tangazo/loadenv.php';
 
+//This is the  actual API documentation.
 
 $curl = curl_init();
 curl_setopt_array($curl, array(
@@ -20,10 +22,9 @@ curl_setopt_array($curl, array(
     "message": "This is a message.\n\nRegards\nMobitech Technologies"
 }',
   CURLOPT_HTTPHEADER => array(
-    'h_api_key: 8fdcb286ebdc63d38a3d9d8457f5aa069ce492fdc5b253043a67d74efd971a17',
+    'h_api_key: api_key',
     'Content-Type: application/json'
-  ),
-));
+  ),));
 
 $response = curl_exec($curl);
 
