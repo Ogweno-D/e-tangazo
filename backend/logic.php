@@ -23,14 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST["message"];
 
     // SQL query to insert data into your table
-    $sql = "INSERT INTO users ( fname, lname, email, number, message) VALUES (?, ?, ?, ?, ?)";
+    $sql = 'INSERT INTO users ( fname, lname, email, number, message) VALUES (?, ?, ?, ?, ?)';
 
     // Prepare the statement
     $stmt = $conn->prepare($sql);
 
     if ($stmt) {
         // Bind parameters to the placeholders
-        $stmt->bind_param("sss", $fname , $lname, $email, $number, $message);
+        $stmt->bind_param("sssss", $fname , $lname, $email, $number, $message);
 
         // Execute the statement
         if ($stmt->execute()) {
