@@ -1,6 +1,6 @@
 <?php include_once("../frontend/header.php");?>
    <main>
-   <form method="post" class="form-horizontal">
+   <form action="../includes/signup.inc.php" method="post" class="form-horizontal">
 
    <div class="form-group">
     <label for="firstname" class="col-sm-2 control-label">First name</label>

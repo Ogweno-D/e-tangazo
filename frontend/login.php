@@ -1,6 +1,6 @@
 <?php include_once("../frontend/header.php");?>
 <main>
-    <form class="form-horizontal">
+    <form action="../includes/login.inc.php" method="post" class="form-horizontal">
     <div class="form-group">
         <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
@@ -24,7 +24,8 @@
     </div>
     <div  class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary" name="submit">Login</button>
+        <input type="submit" class="btn btn-primary value="Login" name="login">
+        <!-- <button type="submit" class="btn btn-primary" name="login">Login</button> -->
         </div>
     </div>
     </form>

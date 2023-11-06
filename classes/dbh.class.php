@@ -6,7 +6,7 @@ class Dbh {
     private $host ="localhost";
     private $user ="root";
     private $pwd ="root";
-    private $dbName ="CommerceLinkDB";
+    private $dbName ="Etangazo";
 
 
     protected function connect(){
