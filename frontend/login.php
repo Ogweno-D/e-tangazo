@@ -1,89 +1,32 @@
-<?php
-    include_once("./resource/session.php");
-    include_once("./resource/database.php");
-    include_once("./resource/utilities.php");
-
-
-    if(isset($_POST["login"])){
-        //array to hld errors 
-        $form_errors= array();
-
-        //validate thr form 
-
-        $required_fields =array("username","password");
-
-        $form_errors =array_merge($form_errors,check_empty_fields($required_fields));
-
-        //form passed all the validation steps 
-        if(empty($form_errors)){
-           
-            //collect form data
-            $user =$_POST['username'];
-            $password =$_POST['password'];
-             //check if user exist in the database
-             $sql ="SELECT * FROM users WHERE username =:username";
-             $statement =$db->prepare($sql);
-             $statement->execute(array(":username"=>$user));
-
-             while($rows=$statement->fetch()){
-                $id = $rows['id'];
-                $hashed_password =$rows['password'];
-                $username =$rows['username'];
-
-
-                if(password_verify($password,$hashed_password)){
-                    $_SESSION["id"]=$id;
-                    $_SESSION['username'] =$username;
-                    header("Location:index.php");
-
-                }else{
-                    $result ="Invalid username or password";
-                    $result =flash_message("Invalid username or password");
-                }
-
-             }
-
-        }else{
-            if(count($form_errors)==1){
-                $result =flash_message("there was one error in the form");//"there was one error in the form";
-            }else{
-                // $result = "there were " .count($form_errors) ." errors in the form";
-                $result =flash_message( "there were " .count($form_errors) ." errors in the form");
-            }
-        }
-    }
-
- ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>User Authentication system </h2>
-    <h3>Login form</h3>
-    <?php if(isset($result)) echo $result; ?>
-    <?php if(!empty($form_errors)) echo show_error($form_errors); ?>
-
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td>username</td>
-                <td><input type="text" name="username" id=""></td>
-            </tr>
-            <tr>
-                <td>password</td>
-                <td><input type="password" name="password" id=""></td>
-            </tr>
-            <tr>
-                <td><a href="#">forgoten  password</a></td>
-                <td><input style="float: right;" type="submit" name="login" value="Signin"></td>
-            </tr>
-        </table>
+<?php include_once("../frontend/header.php");?>
+<main>
+    <form class="form-horizontal">
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+        <input type="email" class="form-control input-lg" id="inputEmail3" placeholder="Email" name="email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+        <input type="password" class="form-control input-lg" id="inputPassword3" placeholder="Password" name="password">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+            <label>
+            <input type="checkbox" name="remember"> Remember me
+            </label>
+        </div>
+        </div>
+    </div>
+    <div  class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary" name="submit">Login</button>
+        </div>
+    </div>
     </form>
-    <p><a href="index.php">Back</a></p>
-</body>
-</html>
+</main>
+<?php include_once("../frontend/footer.php") ?>
