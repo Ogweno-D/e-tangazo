@@ -3,10 +3,10 @@
     
 }
 body{
-    background: #444;
-}
+    background: white;
+} 
 
-li,ul{
+ li,ul{
     list-style-type: none;
     padding: 0;
     text-decoration: none;
@@ -15,9 +15,9 @@ li,ul{
 
 main{
     padding:140px 40px 40px;
-    color: #bbb;
+    color: white;
     position: relative;
-    /* margin-left: 90px; */
+    margin-left: 90px;
 
 }  
 
@@ -79,11 +79,11 @@ nav a{
     text-decoration: none;
     gap: 20px;
     
-}
+} 
 
 /* open state */
 
-nav.open{
+ nav.open{
     left: 0;
 
 }
@@ -94,7 +94,7 @@ nav.open{
 .burger.open span:nth-child(2){
     opacity: 0;
     width: 0;
-}
+} 
 
 .burger.open span:nth-child(3){
     transform: rotate(-45deg)translateY(-10px);
@@ -109,20 +109,20 @@ nav.open{
     margin-left: 30px;
     /* left: 100px; */
     
-}
+ } 
 
-a{
+ a{
     color: #eee;
     text-decoration: none;
 }
 a:hover{
     color: blue;
     text-decoration: none;
-}
+} 
 
-form{
+/* form{
     position: absolute;
     left: 30%;
     width: 450px;
     
-}
+} */

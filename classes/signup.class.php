@@ -10,9 +10,9 @@ class Signup extends Dbh{
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute(array($first_name,$last_name,$email,$phone,$password));  
         if($stmt->rowCount()==1){
-            echo "user registed successfully";
+            echo "User registed successfully";
         }else{
-            echo " something went  wrong try again";
+            echo " Something went  wrong try again";
         }
     }
 }

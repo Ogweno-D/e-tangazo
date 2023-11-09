@@ -1,3 +1,4 @@
 <?php
- include_once("./frontend/header.php");
- include_once("./frontend/footer.php");
+ include_once("./header.php");
+ include_once("./footer.php");
+ ?>

@@ -9,10 +9,10 @@
 				<span></span>
 				<span></span>
 			</div>
-			<h1><li><a href="../index.php">Site Title</a></li></h1> 
+			<h1><li><a href="./index.php">E-Tangazo</a></li></h1> 
 			<div class="title">
-			<li><a href="../frontend/login.php">Login</a></li>
-			<li><a href="../frontend/signup.php">signup</a></li>
+			<li><a href="./login.php">Login</a></li>
+			<li><a href="./signup.php">signup</a></li>
 			
 			</div>
 		</header>
@@ -21,7 +21,7 @@
 			
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="#">About</a></li>
+					<li><a href="">About</a></li>
 					<li><a href="#">Contact</a></li>
 					<li><a href="#">Shop</a></li>
 				</ul>
