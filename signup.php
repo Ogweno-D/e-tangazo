@@ -14,41 +14,31 @@
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Name</label>
 									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
-									<div class="invalid-feedback">
-										Name is required	
-									</div>
+									
 								</div>
 
 								<div class="mb-2">
 									<label class="mb-2 text-muted" for="email">Email Address</label>
 									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
-									<div class="invalid-feedback">
-										Email is invalid
-									</div>
+									
 								</div>
 
                 <div class="mb-2">
 									<label class="mb-2 text-muted" for="name">Phone Number</label>
 									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
-									<div class="invalid-feedback">
-										Your phone number is required.
-									</div>
+									
 								</div>
 
 								<div class="mb-2">
 									<label class="mb-2 text-muted" for="password">Password</label>
 									<input id="password" type="password" class="form-control" name="password" required>
-								    <div class="invalid-feedback">
-								    	Password is required
-							    	</div>
+								    
 								</div>
 
                 <div class="mb-2">
 									<label class="mb-2 text-muted" for="password">Confirm Password</label>
 									<input id="password" type="password" class="form-control" name="password" required>
-								    <div class="invalid-feedback">
-								    	Your Passwords do not match
-							    	</div>
+								   
 								</div>
 
 								<p class="form-text text-muted mb-3">

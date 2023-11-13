@@ -15,9 +15,7 @@
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="email">Email Address</label>
 									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
-									<div class="invalid-feedback">
-										Email is invalid
-									</div>
+									
 								</div>
 
 								<div class="mb-3">
@@ -28,9 +26,7 @@
 										</a>
 									</div>
 									<input id="password" type="password" class="form-control" name="password" required>
-								    <div class="invalid-feedback">
-								    	Password is required
-							    	</div>
+								    
 								</div>
 
 								<div class="d-flex align-items-center">

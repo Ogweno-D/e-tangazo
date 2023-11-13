@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Define your MySQL database connection details
     $dbServer = "localhost";
-    $dbUsername = "root";
+    $dbUsername = "Ogweno";
     $dbPassword = "";
     $dbName = "cs_bulksms";
 
