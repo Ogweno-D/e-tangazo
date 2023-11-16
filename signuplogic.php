@@ -16,37 +16,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Retrieve data from the form
-    // $fname = $_POST["fname"];
-    // $lname = $_POST ["lname"];
-    // $email = $_POST["email"];
-    // $number = $_POST["number"];
-    // $message = $_POST["message"];
+    $fname = $_POST["fname"];
+    $lname = $_POST ["lname"];
+    $email = $_POST["email"];
+    $number = $_POST["number"];
+    $password = $_POST["password"];
 
     // SQL query to insert data into your table
-    // $sql = 'INSERT INTO users ( fname, lname, email, number, message) VALUES (?, ?, ?, ?, ?)';
+    $sql = 'INSERT INTO users ( fname, lname, email, number, password) VALUES (?, ?, ?, ?, ?)';
 
     // Prepare the statement
-    // $stmt = $conn->prepare($sql);
+    $stmt = $conn->prepare($sql);
 
-    //if ($stmt) {
+    if ($stmt) {
         // Bind parameters to the placeholders
-        //$stmt->bind_param("sssss", $fname , $lname, $email, $number, $message);
+        $stmt-> bind_param("sssss", $fname , $lname, $email, $number, $password);
 
         // Execute the statement
-        //if ($stmt->execute()) {
-           // echo "Data inserted successfully.";
-        // } else {
-        //     echo "Error: " . $stmt->error;
-        // }
+        if ($stmt->execute()) {
+            echo "Data inserted successfully.";
+        } else {
+            echo "Error: " . $stmt->error;
+        }
 
         // Close the statement
-    //     $stmt->close();
-    // } else {
-    //     echo "Error: " . $conn->error;
-    // }
+        $stmt->close();
+    } else {
+        echo "Error: " . $conn->error;
+    }
 
     // Close the connection
-    // $conn->close();
+    $conn->close();
 }
-return $conn;
 ?>

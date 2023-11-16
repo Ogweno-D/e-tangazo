@@ -10,10 +10,18 @@
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-2 text-center">Register</h1>
-							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+
+							<form method="POST" class="needs-validation" novalidate="" autocomplete="off" action="./process_signup.php">
+                
 								<div class="mb-3">
-									<label class="mb-2 text-muted" for="name">Name</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<label class="mb-2 text-muted" for="name">First name</label>
+									<input id="fname" type="text" class="form-control" name="fname" value="" required autofocus>
+									
+								</div>
+
+                <div class="mb-3">
+									<label class="mb-2 text-muted" for="name">Last name</label>
+									<input id="lname" type="text" class="form-control" name="lname" value="" required autofocus>
 									
 								</div>
 
@@ -25,7 +33,7 @@
 
                 <div class="mb-2">
 									<label class="mb-2 text-muted" for="name">Phone Number</label>
-									<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+									<input id="number" type="text" class="form-control" name="number" value="" required autofocus>
 									
 								</div>
 
@@ -37,7 +45,7 @@
 
                 <div class="mb-2">
 									<label class="mb-2 text-muted" for="password">Confirm Password</label>
-									<input id="password" type="password" class="form-control" name="password" required>
+									<input id="password" type="password" class="form-control" name="pwd" required>
 								   
 								</div>
 

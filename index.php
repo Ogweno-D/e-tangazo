@@ -1,28 +1,25 @@
 <?php
-?>
 
+	session_start();
+	$_SESSION
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-<link>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/style.css">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>E-tangazo | Dasboard</title>
 </head>
 <body>
+	<?php if (isset($_SESSION["user_id"])): ?> 
+		<p> You are logged in</p>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        
-    </nav>
+	<?php else: ?>
+		<p><a href="login.php"> Log in</a> or <a href="./signup.php"></a> </p>
+	
+	<?php endif; ?>
 
-    <!-- Content -->
-   
-
-    <!-- Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	
 </body>
 </html>
-
-
