@@ -5,41 +5,46 @@
 			<div class="row justify-content-sm-center h-100">
 				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
 					<div class="text-center ">
-						<img src="./public/etangazo (2).png" alt="logo" width="200">
+						<img src="./admin/etangazo (2).png" alt="logo" width="200">
 					</div>
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
 							<h1 class="fs-4 card-title fw-bold mb-2 text-center">Register</h1>
 
-							<form method="POST" class="needs-validation" novalidate="" autocomplete="off" action="./process_signup.php">
+							<form method="POST" class="needs-validation"  autocomplete="off" action="./process_signup.php" id="signup" >
                 
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">First name</label>
-									<input id="fname" type="text" class="form-control" name="fname" value="" required autofocus>
+									<input id="fname" type="text" class="form-control" name="fname" 
+                   value="<?= htmlspecialchars($_POST["fname"] ?? "") ?>" required autofocus>
 									
 								</div>
 
                 <div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Last name</label>
-									<input id="lname" type="text" class="form-control" name="lname" value="" required autofocus>
+									<input id="lname" type="text" class="form-control" name="lname"
+                  value="<?= htmlspecialchars($_POST["lname"] ?? "") ?>" required autofocus>
 									
 								</div>
 
 								<div class="mb-2">
 									<label class="mb-2 text-muted" for="email">Email Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<input id="email" type="email" class="form-control" name="email" 
+                  value="<?= htmlspecialchars($_POST["email"] ?? "") ?>"required autofocus>
 									
 								</div>
 
                 <div class="mb-2">
 									<label class="mb-2 text-muted" for="name">Phone Number</label>
-									<input id="number" type="text" class="form-control" name="number" value="" required autofocus>
+									<input id="number" type="text" class="form-control" name="number" 
+                  value="<?= htmlspecialchars($_POST["number"] ?? "") ?>" required autofocus>
 									
 								</div>
 
 								<div class="mb-2">
 									<label class="mb-2 text-muted" for="password">Password</label>
-									<input id="password" type="password" class="form-control" name="password" required>
+									<input id="password" type="password" class="form-control" name="password" 
+                  required>
 								    
 								</div>
 

@@ -1,6 +1,9 @@
 <!-- This is where the signup will be processed and validations done -->
 
 <?php 
+
+    mysqli_report(MYSQLI_REPORT_OFF);
+
     if (empty($_POST["fname"])){
         die("Your first name is required");
     }
@@ -32,12 +35,15 @@
 
     $mysqli= require __DIR__ ."./logic.php";
 
-    $sql = 'INSERT INTO users ( fname, lname, email, number, password) VALUES (?, ?, ?, ?, ?)';
+    $sql = "INSERT INTO users ( fname, lname, email, number, password) VALUES (?, ?, ?, ?, ?)";
+    $stmt = $mysqli->stmt_init();
 
-    $stmt = $conn->prepare($sql);
+   if(!$stmt = $mysqli->prepare($sql)){
+        die("SQL Error :". $mysqli->error);
+   }
 
         // Bind parameters to the placeholders
-     $stmt->bind_param("sssss", $fname , $lname, $email, $number, $password_hash );
+     $stmt->bind_param("sssss", $_POST["fname"] , $_POST["lname"] ,$_POST["email"] , $_POST["number"] , $password_hash );
 
         // Execute the statement
         if ($stmt->execute()) {
