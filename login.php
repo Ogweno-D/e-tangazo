@@ -1,9 +1,9 @@
-<?php include_once("./header.php");
+<?php include_once("./includes/header.php");
 
 $is_invalid = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-	$mysqli = require __DIR__ ."./logic.php";
+	$mysqli = require __DIR__ ."./database/logic.php";
 
 	// TO COUNTERCHECK THE SUBMITTED LOGIN CREDENTIALS FROM THE DATABASE
 	$sql = sprintf("SELECT * FROM users
@@ -125,4 +125,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
     </form> --> 
 </m>
-<?php include_once("./footer.php") ?>
+<?php include_once("./includes/footer.php") ?>

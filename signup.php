@@ -1,4 +1,4 @@
-<?php include_once("./header.php");?>
+<?php include_once("./includes/header.php");?>
   <main>
 <section class="">
 		<div class="container h-100">
@@ -163,4 +163,4 @@
 <!-- </form>
    </div> -->
    </main>
-<?php include_once("./footer.php") ?>
+<?php include_once("./includes/footer.php") ?>
