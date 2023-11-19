@@ -16,41 +16,40 @@
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">First name</label>
 									<input id="fname" type="text" class="form-control" name="fname" 
-                   value="<?= htmlspecialchars($_POST["fname"] ?? "") ?>" required autofocus>
+                   value="<?= htmlspecialchars($_POST["fname"] ?? "") ?>" >
 									
 								</div>
 
                 <div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Last name</label>
 									<input id="lname" type="text" class="form-control" name="lname"
-                  value="<?= htmlspecialchars($_POST["lname"] ?? "") ?>" required autofocus>
+                  value="">
 									
 								</div>
 
 								<div class="mb-2">
 									<label class="mb-2 text-muted" for="email">Email Address</label>
 									<input id="email" type="email" class="form-control" name="email" 
-                  value="<?= htmlspecialchars($_POST["email"] ?? "") ?>"required autofocus>
+                  value="" >
 									
 								</div>
 
                 <div class="mb-2">
 									<label class="mb-2 text-muted" for="name">Phone Number</label>
 									<input id="number" type="text" class="form-control" name="number" 
-                  value="<?= htmlspecialchars($_POST["number"] ?? "") ?>" required autofocus>
+                  value="" required autofocus>
 									
 								</div>
 
 								<div class="mb-2">
 									<label class="mb-2 text-muted" for="password">Password</label>
-									<input id="password" type="password" class="form-control" name="password" 
-                  required>
+									<input id="password" type="password" class="form-control" name="password">
 								    
 								</div>
 
                 <div class="mb-2">
 									<label class="mb-2 text-muted" for="password">Confirm Password</label>
-									<input id="password" type="password" class="form-control" name="pwd" required>
+									<input id="pwd" type="password" class="form-control" name="pwd" >
 								   
 								</div>
 

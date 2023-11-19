@@ -18,6 +18,20 @@ Validation
         },
         {
             rule:"email"
+        },
+        {
+            validator:(value)=>()=>{
+            return fetch("validate_email.php= " + 
+            encodeURI(value))
+             .then(function(response){
+                return response.json();
+             })
+             .then(function(json){
+                return json.available;
+             })
+            },
+            errorMessage : "Email already taken"
+
         }
     ])
     .addField("#password", [
@@ -29,15 +43,17 @@ Validation
 
         }
     ])
-    .addField("#pwd",[
+    .addField("#pwd", [
         {
-           validator:(value, fields) =>{
+           validator:(value, fields) => {
+            return value === fields["#password"].elem.value;
 
            },
-           errorMessage: "Passwords should match",
-        },
+           errorMessage: "Passwords should match!"
+        }
         
     ])
+    
     .onSuccess((event)=>{
         document.getElementById("signup").submit(); 
     })

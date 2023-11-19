@@ -33,7 +33,7 @@
     $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 
-    $mysqli= require __DIR__ ."./logic.php";
+    $mysqli= require __DIR__ ."./database/logic.php";
 
     $sql = "INSERT INTO users ( fname, lname, email, number, password) VALUES (?, ?, ?, ?, ?)";
     $stmt = $mysqli->stmt_init();
@@ -47,8 +47,7 @@
 
         // Execute the statement
         if ($stmt->execute()) {
-           
-           header("Location: index.php") ;
+        header("Location: index.php") ;
         } else {
             if($mysqli->errno === 1062){
                 die("Email already taken:");
