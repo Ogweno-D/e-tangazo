@@ -4,3 +4,12 @@ vendor/
 composer.json
 composer.lock
 loadenv.php
+/admin/css
+/admin/fonts
+/admin/images
+/admin/js
+/admin/scss
+/admin/pages
+/admin/vendors
+/admin/package.json
+/admin/gulpfile.js

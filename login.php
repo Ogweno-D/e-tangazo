@@ -6,12 +6,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$mysqli = require __DIR__ ."./database/logic.php";
 
 	// TO COUNTERCHECK THE SUBMITTED LOGIN CREDENTIALS FROM THE DATABASE
+
 	$sql = sprintf("SELECT * FROM users
 				WHERE email ='%s'",
 			$mysqli->real_escape_string($_POST["email"])
 				);
 	$result = $mysqli->query($sql);
 	$user= $result ->fetch_assoc();
+
 
 	if($user) {
 	   if(password_verify($_POST["password"], $user["password"])){
@@ -20,10 +22,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 		   $_SESSION["user_id"] = $user["id"];
 
-		   header("Location: index.php");
+		   if($user["id"] == 21 || $user["id"]== 22){
+			header("Location: ./admin/index.php");
+		   }else{
+		   header("Location: index.php") ;
+		   }
 		   exit;
 	   };
 	}
+
 
 	$is_invalid=true;
 }

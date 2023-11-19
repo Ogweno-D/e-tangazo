@@ -1,4 +1,4 @@
-<?php include_once("./includes/header.php");
+<?php
 
 $is_invalid = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -28,16 +28,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$is_invalid=true;
 }
 
-
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="author" content="Muhamad Nauval Azhar"> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="This is a login page template based on Bootstrap 5">
+	<title>E-tangazo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer ></script>
+	<script src="./static/validation.js" defer ></script>
+</head>
+<body>
 <main>
    <section class="h-100">  
 		<div class="container h-100">
 			<div class="row justify-content-sm-center h-100">
 				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
 					<div class="text-center my-3">
-						<img src="./admin/etangazo (2).png" alt="logo" width="200">
+						<img src="etangazo.png" alt="logo" width="200">
 					</div>
 					<div class="card shadow-lg">
 						<div class="card-body p-5">
@@ -92,4 +103,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		</div>
 </section>
 <script src="js/login.js"></script>
-   </main>
+</main>
+</body>
+</html>
