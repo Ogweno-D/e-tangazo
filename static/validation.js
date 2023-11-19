@@ -56,4 +56,5 @@ Validation
     
     .onSuccess((event)=>{
         document.getElementById("signup").submit(); 
+        document.getElementById("tangazo").submit();
     })

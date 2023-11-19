@@ -1,4 +1,4 @@
-<!-- This is where the signup will be processed and validations done -->
+<!-- This is where the tangazo will be processed and validations done -->
 
 <?php 
 
@@ -20,7 +20,7 @@
     }
 
 
-    $mysqli= require __DIR__ ."./logic.php";
+    $mysqli= require __DIR__ ."./database/logic.php";
 
     $sql = "INSERT INTO tangazo ( first_name, last_name, email, phone, message) VALUES (?, ?, ?, ?, ?)";
     $stmt = $mysqli->stmt_init();
@@ -35,7 +35,8 @@
         // Execute the statement
         if ($stmt->execute()) {
            
-           header("Location: index.php") ;
+          // header("Location: index.php") ;
+          header("Location: ./api/api_index.php  ");
         } else {
            die("MySQL Error: ". $mysqli->error);
         }

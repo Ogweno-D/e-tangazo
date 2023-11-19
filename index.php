@@ -1,6 +1,22 @@
 <?php
 	session_start();
-	$_SESSION
+
+    //Function to check if the user is logged in
+    function isUserLoggedIn() {
+
+       return isset($_SESSION['user_id']);
+
+        }
+
+    //Function to log the user out
+    function logoutUser() {
+    session_destroy();
+    header("Location: index.php");  // Redirect to your home page or login page
+    exit();
+        }
+
+	
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +36,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./static/style.css" rel="stylesheet" />
+
     </head>
     <body id="page-top">
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
@@ -33,8 +51,36 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#features">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="./tangaza.php"> Advertise?</a></li>
-						<li class="nav-item" ><a class="nav-link me-lg-3" href="./logout.php">Log out</a>   </li>
+                        <?php
+                         // Display login or logout link based on user's login status
+                             if (isUserLoggedIn()) {
+                                echo '
+                                <li class="nav-item"> <a class="nav-link me-lg-3" href="tangaza.php">Advertise?</a></li>';
+                             }
+                            //     } else {
+                            //      echo '<li class="nav-item"><a class="nav-link me-lg-3" href="login.php"> Login </a></li>';
+                            //  }
+                          ?>
+
+
+                        <!-- <li class="nav-item"> <a class="nav-link me-lg-3" href="tangaza.php">Advertise?</a></li> -->
+	
+                        <?php
+                         // Display login or logout link based on user's login status
+                             if (isUserLoggedIn()) {
+                                echo '<li class="nav-item"><a class="nav-link me-lg-3" href="? logout"> Logout </a> </li>';
+                                } else {
+                                 echo '<li class="nav-item"><a class="nav-link me-lg-3" href="login.php"> Login </a></li>';
+                             }
+
+                        // Check if the logout link is clicked
+                             if (isset($_GET['logout'])) {
+                               logoutUser();
+                                }
+                          ?>
+                            
+                        <!-- <a class="nav-link me-lg-3" href="./logout.php">Log out</a>  -->
+                        
                     </ul>
                     <!-- <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <span class="d-flex align-items-center">
@@ -59,7 +105,7 @@
                             <div class="d-flex flex-column flex-lg-row align-items-center">
                                 <!-- <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="./assets/google-play-badge.svg" alt="..." /></a>
                                 <a href="#!"><img class="app-badge" src="assets/app-store-badge.svg" alt="..." /></a> -->
-                        <button class="btn btn-primary  px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="" onclick="" >
+                        <button class="btn btn-primary  px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="" onclick="redirectToAdvertisePage()" >
                         <span class="d-flex align-items-center">
                             <i class="bi-chat-text-fill me-2"></i>
                             <span class="Large">Advertise With us?</span>
@@ -107,7 +153,7 @@
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
                         <div class="h2 fs-1 text-white mb-4">"An intuitive solution to a common problem that we all face, wrapped up in a single app!"</div>
-                        <img src="assets/img/tnw-logo.svg" alt="..." style="height: 3rem" />
+                        <img src="admin/etangazo.png" alt="..." style="height: 3rem" />
                     </div>
                 </div>
             </div>
@@ -206,12 +252,17 @@
                 </div>
             </div>
 </footer>
+<script>
+     function redirectToAdvertisePage() {
+        window.location.href = 'tangaza.php';
+    }
+</script>
 
 		<!-- Bootstrap core JS-->
         
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+<script src="js/index.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
