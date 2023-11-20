@@ -100,8 +100,8 @@
                     <div class="col-lg-6">
                         <!-- Mashead text and app badges-->
                         <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 class="display-1 lh-1 mb-3">Showcase your app beautifully.</h1>
-                            <p class="lead fw-normal text-muted mb-5">Launch your mobile app landing page faster with this free, open source theme from Start Bootstrap!</p>
+                            <h1 class="display-1 lh-1 mb-3">Spread your message to the World</h1>
+                            <p class="lead fw-normal text-muted mb-5">Launch your business to great levels with this E-tangazo app</p>
                             <div class="d-flex flex-column flex-lg-row align-items-center">
                                 <!-- <a class="me-lg-3 mb-4 mb-lg-0" href="#!"><img class="app-badge" src="./assets/google-play-badge.svg" alt="..." /></a>
                                 <a href="#!"><img class="app-badge" src="assets/app-store-badge.svg" alt="..." /></a> -->
@@ -152,7 +152,7 @@
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
-                        <div class="h2 fs-1 text-white mb-4">"An intuitive solution to a common problem that we all face, wrapped up in a single app!"</div>
+                        <div class="h2 fs-1 text-white mb-4">"An intuitive solution to bulk messaging, wrapped up in a single app!"</div>
                         <img src="admin/etangazo.png" alt="..." style="height: 3rem" />
                     </div>
                 </div>
@@ -170,8 +170,8 @@
                                     <!-- Feature item-->
                                     <div class="text-center">
                                         <i class="bi-phone icon-feature text-gradient d-block mb-3"></i>
-                                        <h3 class="font-alt">Device Mockups</h3>
-                                        <p class="text-muted mb-0">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                                        <h3 class="font-alt">Devices</h3>
+                                        <p class="text-muted mb-0">This app can be accessed across all devices</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-5">
@@ -179,7 +179,7 @@
                                     <div class="text-center">
                                         <i class="bi-camera icon-feature text-gradient d-block mb-3"></i>
                                         <h3 class="font-alt">Flexible Use</h3>
-                                        <p class="text-muted mb-0">Put an image, video, animation, or anything else in the screen!</p>
+                                        <p class="text-muted mb-0">You can use it anywhere anytime!</p>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
                                     <div class="text-center">
                                         <i class="bi-gift icon-feature text-gradient d-block mb-3"></i>
                                         <h3 class="font-alt">Free to Use</h3>
-                                        <p class="text-muted mb-0">As always, this theme is free to download and use for any purpose!</p>
+                                        <p class="text-muted mb-0">As always, this is a free to use  app for any purpose!</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -197,7 +197,7 @@
                                     <div class="text-center">
                                         <i class="bi-patch-check icon-feature text-gradient d-block mb-3"></i>
                                         <h3 class="font-alt">Open Source</h3>
-                                        <p class="text-muted mb-0">Since this theme is MIT licensed, you can use it commercially!</p>
+                                        <p class="text-muted mb-0">Since this is a public project, you can use it commercially!</p>
                                     </div>
                                 </div>
                             </div>

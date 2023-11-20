@@ -36,7 +36,7 @@
         if ($stmt->execute()) {
            
           // header("Location: index.php") ;
-          header("Location: ./api/api_index.php  ");
+          header("Location: ./api/api.php  ");
         } else {
            die("MySQL Error: ". $mysqli->error);
         }

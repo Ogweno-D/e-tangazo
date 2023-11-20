@@ -6,9 +6,12 @@ require '/xampp/htdocs/e-tangazo/loadenv.php';
 $pdo = require __DIR__ ."./../database/dbconn.php";
 
 // Fetch mobile numbers from the database 
-$stmt = $pdo->prepare("SELECT phone FROM tangazo");
+// $stmt = $pdo->prepare("SELECT phone FROM tangazo");
+$stmt = $pdo->prepare(" SELECT phone FROM admin");
 $stmt->execute();
 $mobileNumbers = $stmt->fetchAll(PDO::FETCH_COLUMN);
+
+// print_r($mobileNumbers);
 
 // Print the fetched mobile numbers
 // foreach ($mobileNumbers as $mobileNumber) {
@@ -53,7 +56,7 @@ $response = curl_exec($curl);
 if ($response === false) {
     echo 'Curl error: ' . curl_error($curl) . PHP_EOL;
 } else {
-    echo $response;
+    // echo $response;
 
     // Redirect to the home page after successful API request
    header('Location: ./../index.php  '); 

@@ -16,21 +16,21 @@
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="name">First name</label>
 									<input id="fname" type="text" class="form-control" name="fname" 
-                   value="<?= htmlspecialchars($_POST["fname"] ?? "") ?>" >
+                   value="<?= htmlspecialchars($_POST["fname"] ?? "") ?>" required autofocus >
 									
 								</div>
 
                 <div class="mb-3">
 									<label class="mb-2 text-muted" for="name">Last name</label>
 									<input id="lname" type="text" class="form-control" name="lname"
-                  value="">
+                  value="" required autofocus>
 									
 								</div>
 
 								<div class="mb-2">
 									<label class="mb-2 text-muted" for="email">Email Address</label>
 									<input id="email" type="email" class="form-control" name="email" 
-                  value="" >
+                  value="" required autofocus >
 									
 								</div>
 
