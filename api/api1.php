@@ -6,8 +6,8 @@ require './vendor/autoload.php';
 use AfricasTalking\SDK\AfricasTalking;
 
 // Set your app credentials
-$username   = "Sandbox";
-$apiKey     = '82eac4589ed378c9dd3eaf774b2e5b4d7351988a4ed779a2ac16d1d79cec1a10';
+// $username   = "Sandbox";
+// $apiKey     = '';
 
 // Initialize the SDK
 $AT         = new AfricasTalking($username, $apiKey);

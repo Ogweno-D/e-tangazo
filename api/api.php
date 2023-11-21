@@ -48,30 +48,33 @@
 
 <?php
 // Include a file using an absolute path
-// require '/xampp/htdocs/e-tangazo/loadenv.php';
+ require '/xampp/htdocs/e-tangazo/loadenv.php';
 // $secret_key = $api_key;
 require '../vendor/autoload.php';
 use AfricasTalking\SDK\AfricasTalking;
 
 // Set your app credentials
 $username   = "Ogweno";
-$apiKey     = "05af3b7697d8aee3ce281d9c7a741eba1d7d547f8b3c875f29006469f7e4fda0";
+$apiKey     = $api_key;
+
+print_r($apiKey);
 
 // Initialize the SDK
 $AT         = new AfricasTalking($username, $apiKey);
 
 // Get the SMS service
 $sms        = $AT->sms();
+
 $pdo = require __DIR__ ."./../database/dbconn.php";
 
-// Fetch mobile numbers from the database 
-    // $stmt = $pdo->prepare("SELECT phone FROM tangazo");
+    // Fetch mobile numbers from the database 
+    $stmt = $pdo->prepare("SELECT phone FROM tangazo");
     $stmt = $pdo->prepare(" SELECT phone FROM admin");
     $stmt->execute();
     $recipients = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
 // Set the numbers you want to send to in international format
-// $recipients = "+254707298098";
+//$recipients = "+25470729XXX";
 
 // Set your message
 $message    = "Hi, There is a new tangazo. Please click the link below to review and tangaza https://etangazo.com.\n\n Regards E-tangazo team";
