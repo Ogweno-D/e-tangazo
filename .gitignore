@@ -13,3 +13,4 @@ loadenv.php
 /admin/vendors
 /admin/package.json
 /admin/gulpfile.js
+api/api.php
